@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>Simple Animation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type"image="" x-icon"="" href="https://www.favicon.cc/logo3d/47642.png">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    #game {
+        width: 500px;
+        height: 200px;
+        border: 1px solid;
+        background-image: url('https://i.ytimg.com/vi/uS-jkbXtACs/maxresdefault.jpg');
+        margin-top: 15%;
+        margin-left: 32.5%;
+    }
+    #character {
+        width: 20px;
+        height: 50px;
+        background: red;
+        position: relative;
+        top: 100px;
+        animation: jump 500ms infinite linear;
+    }
+    @keyframes jump {
+        0%{top: 100px;}
+        30%{top: 50px;}
+        70%{top: 50px;}
+        100%{top: 100px;}
+    }
+    #block {
+        width: 20px;
+        height: 20px;
+        background: blue;
+        position: relative;
+        top: 80px;
+        left: 480px;
+        animation: block 1s infinite linear;
+    }
+    @keyframes block {
+        0%{left:480px;}
+        100%{left:-5px;}
+    }
+    .platform {
+        width: 500px;
+        height: 50px;
+        background-image: url('https://opengameart.org/sites/default/files/styles/thumbnail/public/Generic%20Grass%201.png');
+        position: relative;
+        top: 80px;
+    }
+</style>
+</head><body>
+<div class="container">
+    <div id="game">
+        <div id="character"></div>
+        <div id="block"></div>
+        <div class="platform"></div>
+    </div>
+</div>
+</body></html>
